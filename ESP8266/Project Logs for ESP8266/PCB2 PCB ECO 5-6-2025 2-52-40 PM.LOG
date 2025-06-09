@@ -1,0 +1,9 @@
+Added Component: Designator=J?(CON RF)
+Add component (AddParameter): Name = "Body Length"; Value = "4 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Class"; Value = "Connector"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "http://www.molex.com/webdocs/datasheets/pdf/en-us/0734120110_RF_COAX_CONNECTORS.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "IEC-class"; Value = "Connector"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sub-class"; Value = "Serial Bus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Terminal Pitch"; Value = "3 mm"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Sheet2 Member=Component J? 73412-0110
+Added Room: Name=Sheet2

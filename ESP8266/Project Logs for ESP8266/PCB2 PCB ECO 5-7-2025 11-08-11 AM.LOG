@@ -1,0 +1,30 @@
+Added Component: Designator=Khoi nut nhan(HDR1X5)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U1(ESP8266-DEVKIT)
+Add component (AddParameter): Name = "Availability"; Value = "Not in stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ZC563900/YKS/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "YKS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ZC563900"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ZC563900/YKS/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Up Pin=Khoi nut nhan-1
+Added Pin To Net: NetName=Down Pin=Khoi nut nhan-2
+Added Pin To Net: NetName=Dat_bao_thuc Pin=Khoi nut nhan-3
+Added Pin To Net: NetName=Mode Pin=Khoi nut nhan-4
+Added Pin To Net: NetName=GND Pin=Khoi nut nhan-5
+Added Pin To Net: NetName=+5 Pin=U1-15
+Added Pin To Net: NetName=Buzzer Pin=U1-21
+Added Pin To Net: NetName=Mode Pin=U1-22
+Added Pin To Net: NetName=Dat_bao_thuc Pin=U1-23
+Added Pin To Net: NetName=Down Pin=U1-26
+Added Pin To Net: NetName=Up Pin=U1-27
+Added Pin To Net: NetName=SDA Pin=U1-28
+Added Pin To Net: NetName=SCL Pin=U1-29
+Added Pin To Net: NetName=DHT11 Pin=U1-30
+Added Member To Class: ClassName=Sheet2 Member=Component Khoi nut nhan Header 5
+Added Member To Class: ClassName=Sheet2 Member=Component U1 ESP8266-DevKit
+Added Room: Name=Sheet2

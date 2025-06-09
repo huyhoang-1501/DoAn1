@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=Mode Pin=U1-20
+Removed Pin From Net: NetName=Dat_bao_thuc Pin=U1-21
+Removed Pin From Net: NetName=Down Pin=U1-22
+Removed Pin From Net: NetName=Up Pin=U1-23
+Removed Pin From Net: NetName=Buzzer Pin=U1-27
+Added Pin To Net: NetName=Buzzer Pin=U1-21
+Added Pin To Net: NetName=Mode Pin=U1-22
+Added Pin To Net: NetName=Dat_bao_thuc Pin=U1-23
+Added Pin To Net: NetName=Down Pin=U1-26
+Added Pin To Net: NetName=Up Pin=U1-27
+Added Room: Name=Sheet2
