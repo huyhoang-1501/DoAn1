@@ -13,9 +13,7 @@
   <p>
     <a href="#-overview">Overview</a> •
     <a href="#-key-features">Key Features</a> •
-    <a href="#-project-structure">Project Structure</a> •
     <a href="#-setup-guide">Setup Guide</a> •
-    <a href="#-wiring-diagram">Wiring Diagram</a> •
     <a href="#-web-dashboard">Web Dashboard</a> •
     <a href="#-demo-video">Demo Video</a>
   </p>
