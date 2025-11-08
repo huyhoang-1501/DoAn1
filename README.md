@@ -66,7 +66,6 @@
   - LiquidCrystal_PCF8574
 
 ## Demo Video
-
 [![Demo Video](https://github.com/user-attachments/assets/6b9afca4-bb96-449a-a765-82d8ad1d4fc7)](https://youtu.be/4SuPDmZ4MYU)
 
 
