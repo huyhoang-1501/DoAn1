@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alarm Clock</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="image/clock.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+  <header id="header">
+    <div class="header-content">
+      <h1><i class="fas fa-clock"></i> Alarm Clock</h1>
+      <div id="time" class="clock">00:00:00</div>
+      <div class="logo-section">
+        <img src="image/spkt.png" alt="HCMUTE Logo" id="logo" />
+        <span>HCMUTE</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="layout-container">
+      <!-- Alarm Settings -->
+      <section class="alarm-container">
+        <h2>Alarm Settings</h2>
+        <div class="alarm-scrollable">
+          <!-- Alarm 1 -->
+          <div class="alarm-card" id="alarmCard1">
+            <div class="alarm-header">
+              <h3>Alarm 1</h3>
+              <button class="delete-btn" onclick="deleteAlarm(1)" title="Delete Alarm"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm month">Month</label>
+              <button class="adjust-btn" onclick="adjustAlarm('month', -1, 1)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMonth1">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('month', 1, 1)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm day">Day</label>
+              <button class="adjust-btn" onclick="adjustAlarm('day', -1, 1)"><i class="fas fa-minus"></i></button>
+              <span id="alarmDay1">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('day', 1, 1)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm hour">Hour</label>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', -1, 1)"><i class="fas fa-minus"></i></button>
+              <span id="alarmHour1">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', 1, 1)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm minute">Minute</label>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', -1, 1)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMinute1">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', 1, 1)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Enable/Disable alarm">Enable</label>
+              <label class="switch">
+                <input type="checkbox" id="alarmEnable1" onchange="toggleAlarmEnable(1)">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <button class="save-btn" onclick="saveAlarm(1)"><i class="fas fa-save"></i> Save Alarm</button>
+          </div>
+          <!-- Alarm 2 -->
+          <div class="alarm-card" id="alarmCard2">
+            <div class="alarm-header">
+              <h3>Alarm 2</h3>
+              <button class="delete-btn" onclick="deleteAlarm(2)" title="Delete Alarm"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm month">Month</label>
+              <button class="adjust-btn" onclick="adjustAlarm('month', -1, 2)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMonth2">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('month', 1, 2)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm day">Day</label>
+              <button class="adjust-btn" onclick="adjustAlarm('day', -1, 2)"><i class="fas fa-minus"></i></button>
+              <span id="alarmDay2">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('day', 1, 2)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm hour">Hour</label>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', -1, 2)"><i class="fas fa-minus"></i></button>
+              <span id="alarmHour2">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', 1, 2)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm minute">Minute</label>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', -1, 2)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMinute2">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', 1, 2)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Enable/Disable alarm">Enable</label>
+              <label class="switch">
+                <input type="checkbox" id="alarmEnable2" onchange="toggleAlarmEnable(2)">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <button class="save-btn" onclick="saveAlarm(2)"><i class="fas fa-save"></i> Save Alarm</button>
+          </div>
+          <!-- Alarm 3 -->
+          <div class="alarm-card" id="alarmCard3">
+            <div class="alarm-header">
+              <h3>Alarm 3</h3>
+              <button class="delete-btn" onclick="deleteAlarm(3)" title="Delete Alarm"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm month">Month</label>
+              <button class="adjust-btn" onclick="adjustAlarm('month', -1, 3)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMonth3">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('month', 1, 3)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm day">Day</label>
+              <button class="adjust-btn" onclick="adjustAlarm('day', -1, 3)"><i class="fas fa-minus"></i></button>
+              <span id="alarmDay3">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('day', 1, 3)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm hour">Hour</label>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', -1, 3)"><i class="fas fa-minus"></i></button>
+              <span id="alarmHour3">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', 1, 3)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm minute">Minute</label>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', -1, 3)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMinute3">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', 1, 3)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Enable/Disable alarm">Enable</label>
+              <label class="switch">
+                <input type="checkbox" id="alarmEnable3" onchange="toggleAlarmEnable(3)">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <button class="save-btn" onclick="saveAlarm(3)"><i class="fas fa-save"></i> Save Alarm</button>
+          </div>
+          <!-- Alarm 4 -->
+          <div class="alarm-card" id="alarmCard4">
+            <div class="alarm-header">
+              <h3>Alarm 4</h3>
+              <button class="delete-btn" onclick="deleteAlarm(4)" title="Delete Alarm"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm month">Month</label>
+              <button class="adjust-btn" onclick="adjustAlarm('month', -1, 4)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMonth4">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('month', 1, 4)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm day">Day</label>
+              <button class="adjust-btn" onclick="adjustAlarm('day', -1, 4)"><i class="fas fa-minus"></i></button>
+              <span id="alarmDay4">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('day', 1, 4)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm hour">Hour</label>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', -1, 4)"><i class="fas fa-minus"></i></button>
+              <span id="alarmHour4">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', 1, 4)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm minute">Minute</label>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', -1, 4)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMinute4">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', 1, 4)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Enable/Disable alarm">Enable</label>
+              <label class="switch">
+                <input type="checkbox" id="alarmEnable4" onchange="toggleAlarmEnable(4)">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <button class="save-btn" onclick="saveAlarm(4)"><i class="fas fa-save"></i> Save Alarm</button>
+          </div>
+          <!-- Alarm 5 -->
+          <div class="alarm-card" id="alarmCard5">
+            <div class="alarm-header">
+              <h3>Alarm 5</h3>
+              <button class="delete-btn" onclick="deleteAlarm(5)" title="Delete Alarm"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm month">Month</label>
+              <button class="adjust-btn" onclick="adjustAlarm('month', -1, 5)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMonth5">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('month', 1, 5)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm day">Day</label>
+              <button class="adjust-btn" onclick="adjustAlarm('day', -1, 5)"><i class="fas fa-minus"></i></button>
+              <span id="alarmDay5">01</span>
+              <button class="adjust-btn" onclick="adjustAlarm('day', 1, 5)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm hour">Hour</label>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', -1, 5)"><i class="fas fa-minus"></i></button>
+              <span id="alarmHour5">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('hour', 1, 5)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Set alarm minute">Minute</label>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', -1, 5)"><i class="fas fa-minus"></i></button>
+              <span id="alarmMinute5">00</span>
+              <button class="adjust-btn" onclick="adjustAlarm('minute', 1, 5)"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="alarm-field">
+              <label title="Enable/Disable alarm">Enable</label>
+              <label class="switch">
+                <input type="checkbox" id="alarmEnable5" onchange="toggleAlarmEnable(5)">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <button class="save-btn" onclick="saveAlarm(5)"><i class="fas fa-save"></i> Save Alarm</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sensor Data -->
+      <section class="sensor-container">
+        <div class="sensor-box">
+          <div class="sensor-icon"><i class="fas fa-thermometer-half"></i></div>
+          <h2>Temperature</h2>
+          <p id="nhietdo">0.0 °C</p>
+        </div>
+        <div class="sensor-box">
+          <div class="sensor-icon"><i class="fas fa-tint"></i></div>
+          <h2>Humidity</h2>
+          <p id="doam">0.0 %</p>
+        </div>
+      </section>
+
+      <!-- Charts -->
+      <section class="chart-container">
+        <div class="chart-box">
+          <h2>Temperature Chart</h2>
+          <canvas id="tempChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <h2>Humidity Chart</h2>
+          <canvas id="humidityChart"></canvas>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <ul>
+      <li>Nguyễn Phạm Huy Hoàng - 22161125</li>
+      <li>Trần Nguyễn Gia Huy - 22161129</li>
+    </ul>
+  </footer>
+
+  <script src="function.js"></script>
+</body>
+</html>
