@@ -54,6 +54,7 @@
 <br>
 
 ## Project Structure
+
 DoAn1/
 │
 ├── ESP8266/                    Arduino source code (.ino)
@@ -77,7 +78,9 @@ DoAn1/
   - RTClib (by Adafruit)
   - DHT sensor library for ESPx (by beegee-tokyo)
   - LiquidCrystal_PCF8574
- * Wiring Diagram
+
+## Wiring Diagram
+
 ESP8266
 ├── LCD I2C (0x27):  SDA → D2, SCL → D1
 ├── RTC DS1307:      SDA → D2, SCL → D1
@@ -89,14 +92,17 @@ ESP8266
 ├── Buzzer:          D7
 └── 3.3V, GND
 
-* Web Dashboard
+## Web Dashboard
 
-Live temperature & humidity charts
-Remote alarm configuration
-Real-time sync with ESP8266
+  ```bash
+  - Live temperature & humidity charts
+  - Remote alarm configuration
+  - Real-time sync with ESP8266
+ 
 
-* Demo Video
-<img src="https://github.com/user-attachments/assets/6b9afca4-bb96-449a-a765-82d8ad1d4fc7" alt="(https://www.youtube.com/shorts/RZyvXtFgk40)">
+## Demo Video
+
+[![Demo Video](https://github.com/user-attachments/assets/6b9afca4-bb96-449a-a765-82d8ad1d4fc7)](https://youtu.be/4SuPDmZ4MYU)
 
 
 <div align="center">
