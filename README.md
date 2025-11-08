@@ -66,8 +66,7 @@
   - LiquidCrystal_PCF8574
 
 ## Demo Video
-[![Demo Video](https://github.com/user-attachments/assets/6b9afca4-bb96-449a-a765-82d8ad1d4fc7)](https://youtu.be/4SuPDmZ4MYU)
-
+[![Demo Video](https://github.com/user-attachments/assets/6b9afca4-bb96-449a-a765-82d8ad1d4fc7)](https://www.youtube.com/shorts/RZyvXtFgk40)
 
 <div align="center">
   <p><strong>© 2025 – HCMUTE Senior Project Team</strong></p>
