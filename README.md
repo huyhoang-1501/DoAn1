@@ -31,7 +31,7 @@
 - **5 independently configurable alarms** (day/month/hour/minute)
 - **Control via 4 push buttons** (Up, Down, Menu, Alarm Off)
 - **Data upload to Firebase** (temperature, humidity, alarms)
-- **Real-time Web Dashboard** (React + Chart.js)
+- **Real-time Web Dashboard** (HTML,CSS,JavaScript)
 
 > **Use case**: Multifunctional desk clock with environmental monitoring.
 
