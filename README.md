@@ -92,16 +92,7 @@
 ### Firebase & Web Setup
 1. Create a Firebase project → enable **Realtime Database** (legacy token mode)
 2. Copy `Database URL` and `Database Secret` into the Arduino sketch
-3. Structure in Firebase:
-
-esp8266_data/
-├── sensors {temperature, humidity, timestamp}
-└── alarms/
-├── alarm1 {day, month, hour, minute, enabled}
-├── alarm2 ...
-└── alarm5
-
-4. Deploy the web dashboard using Firebase Hosting, Vercel, Netlify, or simply open `index.html` locally
+3. Deploy the web dashboard using Firebase Hosting, Vercel, Netlify, or simply open `index.html` locally
 
 <br>
 
