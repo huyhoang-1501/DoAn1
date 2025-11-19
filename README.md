@@ -139,8 +139,8 @@ esp8266_data/
 ### Web Dashboard (Desktop & Product)
 ![Web Dashboard](https://github.com/user-attachments/assets/8ceb3cfd-90eb-44b3-89a8-9b394851385c)
 
-### Demo Video
-[![Demo Video](https://img.youtube.com/vi/RZyvXtFgk40/0.jpg)](https://www.youtube.com/shorts/RZyvXtFgk40)
+### Video
+[![Video](https://github.com/user-attachments/assets/72f00753-cb9d-4c9b-9a00-1c59ab9ddafa)](https://www.youtube.com/shorts/RZyvXtFgk40)
 
 <br>
 
